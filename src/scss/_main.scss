@@ -1,0 +1,367 @@
+@import 'colors';
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0px;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+}
+
+/***********************welcome section*************************/
+
+.bg{
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    height: 100vh;
+
+    .heading{
+        height: 100vh;
+        background-color:rgba(0,0,0,0.4);
+    }
+}
+
+/*****************************About Me section**************************/
+
+.aboutMe{
+    padding-top:5rem;
+    padding-bottom: 8rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    @media (max-width:350px){
+        margin-top:3rem;
+        padding:1rem;
+        //display: flex;
+        //flex-direction: column;
+        
+    }
+
+    .interests{
+        width:80%;
+        display: flex;
+        margin-top:3rem;
+
+        @media (max-width:850px){
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            height: 30%;    
+        }
+        @media(max-width:100px){
+            display: flex;
+            flex-direction: row;
+            width: 95%;
+            //height:35%;
+        }
+    }
+
+    .web, .robotics, .maths{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding-top:2rem;
+        margin:1rem;
+        box-shadow: 4px 4px  10px $green;
+
+        .text{
+            width: 85%;
+        }
+
+        h2{
+            color:black;
+            font-weight: bold;    
+        }
+
+        i{
+            font-size: 2rem;
+            color:violet;
+        }
+    }
+
+    h1{
+        color: $green;
+        margin-block-end:1rem;
+        font-size: 2rem;
+    }
+
+    h2{
+        color: black;
+    }
+
+
+    .country{
+        color: $green;
+        font-weight: bold;
+        text-decoration: underline;
+        
+    }
+
+    .portait{
+        width: 20rem;
+        height: 20rem;
+        
+        border-radius: 500px;
+        margin:3rem;
+        
+
+        @media (max-width:350px){
+            margin-top:2rem;
+            width:15rem;
+            height:15rem;
+        }
+    }
+
+    .text{
+        width: 50%;
+        margin-bottom: 4rem;
+        text-align: center;
+        line-height: 2rem;
+        letter-spacing:1px;
+        
+
+        @media (max-width:550px){
+            margin-top:2rem;
+            margin-bottom: 2rem;
+            width:90%;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width:670px){
+            margin-top:2rem;
+            margin-bottom: 2rem;
+            width:70%;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+    //hover effects over the blocks
+
+    .web{
+        &:hover{
+            background-image:url('/img/web.jpg');
+            background-size: cover;
+            color:white;
+            font-weight: bold;
+            h2{
+                color:white;
+            }
+        }
+    }
+
+    .robotics{
+        &:hover{
+            background-image:url('/img/robot.jpg');
+            background-size: cover;
+            color:white;
+            font-weight: bold;
+            h2{
+                color: white;
+            }
+        }
+    }
+
+    .maths{
+        &:hover{
+            background-image:url('/img/maths.jpg');
+            background-size: cover;
+            color:white;
+            font-weight: bold;
+            h2{
+                color:white;
+            }
+        }
+    }
+
+   
+
+/*****************counter section************************/
+
+.section3{
+
+    background-image: url('/img/part3.jpeg');
+    background-size: cover;
+    background-position: center;
+
+    width: 100vw;
+    
+    
+    color:white;
+    font-size:1rem;
+
+    .overlay{
+    
+        background-color: rgba(0, 0, 0, 0.7);
+        margin:0;
+        padding-top:4rem;
+        padding-bottom: 4rem;
+
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        
+    }
+
+    .row1, .row2{
+        padding:1rem;
+    }
+    
+
+    h3{
+        font-size:2.5rem;
+        margin:0;
+        font-weight: normal;
+    }
+
+    i{
+        color:$green;
+        font-size: 3rem;
+        padding:5px;
+    }   
+
+    
+}
+
+/******************skills section***********************/
+
+
+.skills{
+    background-color: black;
+
+    //background-image: url('/img/skills.jpg');
+    color:white;
+    padding-top:3rem;
+    padding-bottom:3rem;
+
+    .container{
+        width:60%;
+        height:10px;
+        border-radius:10px;
+        border:3px solid $beige;
+        margin:10px auto;
+    }
+
+    .bar{
+        box-shadow: 0px 0px 10px 5px ;
+        height: 5px;
+        //margin:4px 0;
+        background-color: $green;
+    }
+
+    // animations for the skills bar
+
+    .html{
+        animation: html 4s;
+        width: 80%
+    }
+    @keyframes html {
+        0%{
+            width: 0%;
+        }
+
+        100%{
+            width: 80%;
+        }    
+    }
+
+    .js{
+        animation: js 3s;
+        width: 30%
+    }
+    @keyframes js {
+        0%{
+            width: 0%;
+        }
+
+        100%{
+            width: 30%;
+        }    
+    }
+
+    .react{
+        animation: react 3s;
+        width: 40%
+    }
+    @keyframes react {
+        0%{
+            width: 0%;
+        }
+
+        100%{
+            width: 40%;
+        }    
+    }
+
+    .php{
+        animation: php 4s;
+        width: 70%
+    }
+    @keyframes php {
+        0%{
+            width: 0%;
+        }
+
+        100%{
+            width: 70%;
+        }    
+    }
+
+    .py{
+        animation: py 5s;
+        width: 80%
+    }
+    @keyframes py {
+        0%{
+            width: 0%;
+        }
+
+        100%{
+            width: 80%;
+        }    
+    }
+
+    .c{
+        animation: c 4s;
+        width: 60%
+    }
+    @keyframes c {
+        0%{
+            width: 0%;
+        }
+
+        100%{
+            width: 60%;
+        }    
+    }
+
+    .ros{
+        animation: ros 2s;
+        width: 70%
+    }
+    @keyframes ros {
+        0%{
+            width: 0%;
+        }
+
+        100%{
+            width: 70%;
+        }    
+    }
+}
+
