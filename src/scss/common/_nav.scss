@@ -1,7 +1,25 @@
 
 nav{
     background-color:rgba(0,0,0,0.4);
-    border-bottom: 5px solid $green;
+    border-bottom: 3px solid $green;
+    
+    
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        background: $green;
+        height: 2px;
+        transition-property: right;
+        transition-duration: 5s;
+        transition-timing-function: ease-out;
+    }
+    &:hover:before {
+        right: 0;
+    }
 
     position: fixed; 
     top: 0; 
@@ -14,7 +32,7 @@ nav{
         background-color:$green;
 
         &:hover{
-            font-size: 1.5rem;
+        
             color: $black;
         }
     }
@@ -27,7 +45,7 @@ nav{
         padding: 1.5rem;
 
         &:hover{
-            font-size: 2rem;
+            
             color: $green;
 
         }
